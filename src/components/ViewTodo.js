@@ -2,7 +2,7 @@ import React from "react";
 
 
 export default function ViewTodo({ todo, toggleComplete, handleDelete,toggleFavourite }) {
-
+  
   return (
     <div className="todo">
         <h1

@@ -1,14 +1,19 @@
-import React, {useState, useEffect, createContext} from 'react';
+import React, {useState, useEffect, createContext, useContext} from 'react';
 import {
   collection,
   query,
   onSnapshot,
+  doc
 } from "firebase/firestore";
 import { db } from "../firebase_config";
 
 export const DataContext = createContext();
 
-export const DataProvider = (props) => {
+export function useData() {
+  return useContext(DataContext)
+}
+
+export const DataProvider = ({children}) => {
     const [todos, setTodos] = useState([]);
     
     useEffect(() => {
@@ -24,8 +29,8 @@ export const DataProvider = (props) => {
       }, []);
     
     return (
-        <DataContext.Provider value={[todos, setTodos]}>
-            {props.children}
+        <DataContext.Provider value={[todos,setTodos]}>
+            {children}
         </DataContext.Provider>
     )
 }
