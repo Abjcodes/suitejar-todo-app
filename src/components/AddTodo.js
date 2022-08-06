@@ -1,6 +1,7 @@
 import React from "react";
 import { db } from "../firebase_config";
 import { collection, addDoc } from "firebase/firestore";
+import './componentStyles.css';
 
 export default function AddTodo() {
   const [title, setTitle] = React.useState("");
@@ -20,8 +21,18 @@ export default function AddTodo() {
     }
   };
   return (
+    <div className="AmainContainer">
     <form onSubmit={handleSubmit}>
       <div className="input_container">
+        <div className="textContainer">
+          <h2>TODO</h2>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aliquet at eleifend feugiat vitae faucibus nibh dolor dui.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Aliquet at eleifend feugiat vitae faucibus nibh dolor dui. 
+          </p>
+        </div>
         <input
           type="text"
           placeholder="Title"
@@ -35,9 +46,11 @@ export default function AddTodo() {
           onChange={(e) => setDescription(e.target.value)}
         />
       </div>
+      <br/>
       <div className="btn_container">
         <button>Add</button>
       </div>
     </form>
+    </div>
   );
 }

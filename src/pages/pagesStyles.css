@@ -1,0 +1,57 @@
+/*Styling for sign in page*/
+html,body {
+    margin: 0px;
+    background-color: #FFFFFF;
+    height: 100%;
+}
+.mainContainer {
+    margin: 16px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.SleftContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+}
+
+.login-header {
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.login-body {
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/*Styling for dashboard*/
+
+.MainContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.loginDetails {
+    margin-left: 16px;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50%;
+    margin-right: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
