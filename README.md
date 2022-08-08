@@ -1,10 +1,10 @@
 # Getting Started with Create React App
-
+Live project link: https://startling-licorice-106e17.netlify.app
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/42151354/183486068-f086038e-08ef-4556-8586-c72d4092c0c7.png)
-![image](https://user-images.githubusercontent.com/42151354/183486317-17207391-b140-4299-a37c-c4309b2645ee.png)
+![image](https://user-images.githubusercontent.com/42151354/183486608-ea145e72-5260-41e2-89ce-868ef2230b43.png)
 
 ## Available Scripts
 
