@@ -14,7 +14,8 @@ export default function AddTodo() {
         title,
         description,
         completed: false,
-        favourite: false
+        favourite: false,
+        removed: false
       });
       setTitle("");
       setDescription("");

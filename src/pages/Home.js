@@ -13,6 +13,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { db } from "../firebase_config";
+import './pagesStyles.css';
 
 const Home = () => {
   const { logOut, user } = UserAuth();
@@ -80,7 +81,7 @@ const Home = () => {
     <div className="App">
       <div className="loginDetails">
         <p>Welcome, {user?.displayName}</p>
-      <button onClick={handleSignOut} className='border py-2 px-5 mt-10'>
+      <button onClick={handleSignOut} className='logout-btn'>
         Logout
       </button>
       </div>
@@ -88,17 +89,24 @@ const Home = () => {
         <div className="leftContainer">
           <AddTodo />
         </div>
+        <hr></hr>
         <div className="rightContainer">
-        <input type="text" placeholder="Search"
+          <h2>
+            TODO LIST
+          </h2>
+          <div className="sfContainer">
+        <input className= "searchBar" type="text" placeholder="Search"
         onChange={(e) => {
         setSearchTerm(e.target.value);
      }} 
      ></input>
-     <select onChange={handleSelect}>
+     <select className= "filter" onChange={handleSelect}>
       <option defaultValue="All">All</option>
       <option value="Complete">Completed</option>
       <option value="Favourite">Favourites</option>
     </select>   
+    </div>
+    <div className="listContainer">
         {todos.filter((todo) => {
           if(searchTerm === "" || 
           todo.title.toLowerCase().includes(searchTerm.toLowerCase())) {
@@ -113,6 +121,7 @@ const Home = () => {
             handleDelete={handleDelete}
           />
         ))}
+        </div>
         </div>
       </div>
     </div>

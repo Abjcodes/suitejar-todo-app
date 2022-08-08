@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import GoogleButton from "react-google-button";
 import { UserAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import './pagesStyles.css';
@@ -36,8 +35,8 @@ return (
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
   Aliquet at eleifend feugiat vitae faucibus nibh dolor dui. 
         </p>
-        <div className="signBtn">
-        <GoogleButton onClick={handleGoogleSignIn} />
+        <div className="signInBtnContainer">
+        <button className = "signInBtn" onClick={handleGoogleSignIn}>Sign in With Google</button>
         </div>
         </div>
       </div>

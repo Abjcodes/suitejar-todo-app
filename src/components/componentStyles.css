@@ -38,3 +38,80 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
+/*View todo styling*/
+.todo-container h1 {
+    font-size: 24px;
+}
+
+.todo-container p {
+    font-size: 16px;
+}
+
+.todo-container hr {
+    margin-top: 16px;
+}
+
+.viewTodo-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.button-complete {
+    background: #41d44d;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.button-remove {
+    background: #e94141;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.button-favourite {
+    background: #eebb14;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+/*Responsive design*/
+
+@media only screen and (max-width: 700px) {
+    .viewTodo-btn-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .button-complete, .button-favourite, .button-remove {
+        padding: 10px;
+    }
+    .viewTodo-btn-container {
+        margin-top: 32px;
+    }
+    .todo-container {
+        margin-bottom: 32px;
+    }
+}

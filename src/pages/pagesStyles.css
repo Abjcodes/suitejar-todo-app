@@ -3,6 +3,7 @@ html,body {
     margin: 0px;
     background-color: #FFFFFF;
     height: 100%;
+    font-family: 'Inter', sans-serif;
 }
 .mainContainer {
     margin: 16px;
@@ -16,10 +17,17 @@ html,body {
     display: flex;
     flex-direction: column;
     width: 50%;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
+.login-content {
+    width: 70%;
+}
+
 .login-header {
+    font-size: 28px;
     color: rgba(0, 0, 0, 0.85);
 }
 
@@ -27,6 +35,18 @@ html,body {
     color: rgba(0, 0, 0, 0.55);
     font-weight: 400;
     font-size: 20px;
+}
+
+.signInBtn {
+    background: #3161ff;
+    border: none;
+    color: white;
+    padding: 16px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /*Styling for dashboard*/
@@ -54,4 +74,113 @@ html,body {
     display: flex;
     flex-direction: column;
     width: 50%;
+    margin-left: 40px;
 }
+
+.sfContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.searchBar {
+    height: 24px;
+}
+
+.listContainer {
+    margin-right: 40px;
+    margin-top: 64px;
+}
+
+.logout-btn {
+    background: none;
+    border-color: red;
+    color: rgb(226, 43, 43);
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.logout-btn:hover {
+    background: red;
+    color: white;
+}
+
+/*Responsive design*/
+
+@media only screen and (max-width: 700px) {
+     /*SignIn page*/
+     
+     .mainContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+     }
+     .SleftContainer {
+        align-items: center;
+        width: 90%;
+     }
+     .SrightContainer {
+        display: none;
+     }
+     .login-content {
+        width: 80%;
+    }
+    .signInBtn {
+        padding: 16px;
+        width: 80%;
+        font-size: 16px;
+    }
+     /*Home page*/
+     .MainContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .leftContainer {
+        height: 80vh;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .rightContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    h2 {
+        text-align: center;
+    }
+    .sfContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .searchBar {
+        height: 36px;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .filter {
+        height: 40px;
+        width: 100%;
+    }
+    .loginDetails {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logout-btn {
+        background: none;
+        border-color: red;
+        color: rgb(226, 43, 43);
+        padding: 12px 50px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+  }

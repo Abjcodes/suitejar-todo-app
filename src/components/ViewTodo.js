@@ -1,10 +1,11 @@
 import React from "react";
+import './componentStyles.css';
 
 
 export default function ViewTodo({ todo, toggleComplete, handleDelete,toggleFavourite }) {
   
   return (
-    <div className="todo">
+    <div className="todo-container">
         <h1
         style={{ textDecoration: todo.completed && "line-through" }}
         className="list">
@@ -15,14 +16,14 @@ export default function ViewTodo({ todo, toggleComplete, handleDelete,toggleFavo
         className="list">
             {todo.description}
         </p>
-      <div>
+      <div class = "viewTodo-btn-container">
         <button
           className="button-complete"
           onClick={() => toggleComplete(todo)}>
             Complete
         </button>
-        <button className="button-delete" onClick={() => handleDelete(todo.id)}>
-            Delete
+        <button className="button-remove" onClick={() => handleDelete(todo.id)}>
+            Remove
         </button>
         <button
           className="button-favourite"
@@ -31,6 +32,7 @@ export default function ViewTodo({ todo, toggleComplete, handleDelete,toggleFavo
             Favourite
         </button>
       </div>
+      <hr></hr>
     </div>
   );
 }
