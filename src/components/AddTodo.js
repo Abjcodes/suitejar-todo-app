@@ -3,10 +3,13 @@ import { db } from "../firebase_config";
 import { collection, addDoc } from "firebase/firestore";
 import './componentStyles.css';
 
+
 export default function AddTodo() {
+  //States for title and descriotion
   const [title, setTitle] = React.useState("");
   const [description, setDescription] = React.useState("");
 
+  //function to adding keys and values to firestore
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (title !== "") {
@@ -21,13 +24,14 @@ export default function AddTodo() {
       setDescription("");
     }
   };
+  //render
   return (
     <div className="AmainContainer">
     <form onSubmit={handleSubmit}>
       <div className="input_container">
         <div className="textContainer">
           <h2>TODO</h2>
-          <p>
+          <p className="addText">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Aliquet at eleifend feugiat vitae faucibus nibh dolor dui.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.

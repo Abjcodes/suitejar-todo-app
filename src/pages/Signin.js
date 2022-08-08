@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { UserAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import './pagesStyles.css';
-  
 
+//Navigate to dashboard on succesful sign in
 const Signin = () => {
     const { googleSignIn, user } = UserAuth();
     const navigate = useNavigate();
@@ -41,7 +41,7 @@ return (
         </div>
       </div>
       <div className='SrightContainer'>
-        Illustration
+      <img src={require('../assets/Illustration.svg').default} alt='mySvgImage' />
       </div>
     </div>
 )

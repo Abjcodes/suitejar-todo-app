@@ -13,8 +13,9 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+//For firestore databse
 const db = getFirestore(app);
-
+//For firebase authentication
 export const auth = getAuth(app);
 export { db };
 

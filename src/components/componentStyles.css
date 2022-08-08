@@ -8,7 +8,9 @@
     flex-direction: column;
     align-items: center;
 }
-
+.addText { 
+    color: rgba(0, 0, 0, 0.55);
+}
 .btn_container {
     padding-bottom: 80px;
 }
@@ -59,7 +61,7 @@
 }
 
 .button-complete {
-    background: #41d44d;
+    background: #66BFBF;
     border: none;
     color: white;
     padding: 6px 8px;
@@ -72,7 +74,7 @@
 }
 
 .button-remove {
-    background: #e94141;
+    background: #FF0063;
     border: none;
     color: white;
     padding: 6px 8px;
@@ -85,7 +87,7 @@
 }
 
 .button-favourite {
-    background: #eebb14;
+    background: #FAC213;
     border: none;
     color: white;
     padding: 6px 8px;

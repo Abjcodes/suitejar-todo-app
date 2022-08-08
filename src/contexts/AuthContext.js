@@ -8,21 +8,26 @@ import {
 } from 'firebase/auth';
 import { auth } from '../firebase_config';
 
+//Creating context
 const AuthContext = createContext();
 
+//Initiating signin (popup or redirect based upon preference)
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
 
   const googleSignIn = () => {
     const provider = new GoogleAuthProvider();
+    //Uncomment and comment to select popup or redirect based signins(default:popup)
     signInWithPopup(auth, provider);
     //signInWithRedirect(auth, provider)
   };
 
+  //Logging the user out
   const logOut = () => {
       signOut(auth)
   }
 
+  //setting the current user as the logged in user 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
